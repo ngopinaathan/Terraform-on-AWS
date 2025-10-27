@@ -12,8 +12,8 @@ terraform {
 provider "aws" {
   # region                = "eu-west-2"
   region = var.region
-  #AWS_ACCESS_KEY_ID     = "AKIA4NKTOPXNHOW5ZNON"
-  #AWS_SECRET_ACCESS_KEY = "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"
+  #AWS_ACCESS_KEY_ID     = ""
+  #AWS_SECRET_ACCESS_KEY = ""
 }
 
 # Define an AWS VPC resource
@@ -117,3 +117,4 @@ output "vpcid" {
 resource "aws_instance" "example" {
   instance_type = var.environment == "prod" ? "t2.large" : "t2.micro"
 }
+
